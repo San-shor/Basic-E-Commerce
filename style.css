@@ -1,0 +1,134 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Background color for the entire page */
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fdd670;
+  color: #ff6f71;
+}
+
+/* Style for the logo and navigation in the header */
+.logo-icon-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.menu-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.logo h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit; /* Inherit the link color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ff6f71;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+.cart-logo {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  color: #ff6f71;
+}
+
+/* Style for the main section */
+/* main {
+  padding: 20px;
+
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+} */
+
+/* Style for the list items */
+main ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+main li {
+  flex-basis: calc(20% - 10px); /* Adjust the width as needed */
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fdd670;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the images */
+main img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Style for the links */
+main a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hover effect for list items */
+main li:hover {
+  background-color: #ff6f71;
+  transform: translateY(-5px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Center the text */
+main li a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Center the text */
+main h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
