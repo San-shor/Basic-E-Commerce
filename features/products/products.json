@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Product 1",
+    "category": "fruits-vegetables",
+    "price": 10.99,
+    "image": "product1.jpg"
+  },
+  {
+    "name": "Product 2",
+    "category": "candy-choclate",
+    "price": 19.99,
+    "image": "product2.jpg"
+  }
+]

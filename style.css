@@ -68,33 +68,28 @@ nav ul li a:hover {
   height: 32px;
   color: #ff6f71;
 }
-
-/* Style for the main section */
-/* main {
-  padding: 20px;
-
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-} */
-
-/* Style for the list items */
+main {
+  background-color: #f0f0f0;
+}
 main ul {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
+/* Style for each list item */
 main li {
   flex-basis: calc(20% - 10px); /* Adjust the width as needed */
   margin-top: 20px;
   margin-right: 10px;
   padding: 15px;
   text-align: center;
-  background-color: #fdd670;
+  /* background-color: #fdd670;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); */
 }
 
 /* Style for the images */
@@ -113,7 +108,6 @@ main a {
 
 /* Hover effect for list items */
 main li:hover {
-  background-color: #ff6f71;
   transform: translateY(-5px);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
