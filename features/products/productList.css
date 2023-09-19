@@ -1,0 +1,39 @@
+/* CSS styles inspired by Chaldal.com */
+.product-item {
+  display: inline-block;
+  margin: 20px;
+  padding: 15px;
+
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  width: 250px;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-item h3 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-item p {
+  font-size: 1.2rem;
+  color: #ff5722;
+  margin: 10px 0;
+}
+
+/* Optional: Center the product list on the page */
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

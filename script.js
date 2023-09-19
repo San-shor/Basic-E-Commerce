@@ -1,12 +1,15 @@
 async function displayProducts() {
   const productDataUrl = "products.json";
   const productList = document.getElementById("product-list");
+  let params = new URL(document.location).searchParams;
+  let category = params.get("category");
 
   try {
     const response = await fetch(productDataUrl);
     const products = await response.json();
 
     products.forEach((product) => {
+      if (product.category !== category) return;
       const productItem = document.createElement("div");
       productItem.classList.add("product-item");
       productItem.innerHTML = `

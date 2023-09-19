@@ -36,64 +36,36 @@
       </div>
     </header>
     <main>
-      <div>
-        <ul>
-          <li>
-            <img
-              src="https://chaldn.com/_mpimage/fruits-vegetables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23769&q=low&v=1&m=400&webp=1"
-              alt=""
-            />
-            <a href="./features/products/productsList.html" data-category="fruits-vegetables"
-              >Fruits & Vegetables
-            </a>
-          </li>
-          <li>
-            <img
-              src="https://chaldn.com/_mpimage/meat-fish?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23737&q=low&v=1&m=400&webp=1"
-              alt=""
-            />
-            <a href="./features/products/productsList.html" data-category="meat-fish"">Meat & Fish</a>
-          </li>
-          <li>
-            <img
-              src="https://chaldn.com/_mpimage/cooking?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D118865&q=best&v=1&m=400&webp=1"
-              alt=""
-            />
-            <a href="./features/products/productsList.html">Cooking</a>
-          </li>
-          <li>
-            <img
-              src="https://chaldn.com/_mpimage/dairy-eggs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D31484&q=best&v=1&m=400&webp=1"
-              alt=""
-            />
-            <a href="./features/products/productsList.html">Dairy & Egss</a>
-          </li>
-          <li>
-            <img
-              src="https://chaldn.com/_mpimage/beverages?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23727&q=low&v=1&m=400&webp=1"
-              alt=""
-            />
-            <a href="./features/products/productsList.html">Beverage</a>
-          </li>
-          <li>
-            <img
-              src="https://chaldn.com/_mpimage/snacks?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23741&q=low&v=1&m=400&webp=1"
-              alt=""
-            />
-            <a href="./features/products/productsList.html">Snacks</a>
-          </li>
-          <li>
-            <img
-              src="https://chaldn.com/_mpimage/candy-chocolate?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D119184&q=low&v=1&m=400&webp=1"
-              alt=""
-            />
-            <a href="./features/products/productsList.html">Candy & Choclate</a>
-          </li>
-        </ul>
+      <div id="category-links">
+        <ul id="category-items"></ul>
       </div>
-    </main>  
+    </main>
 
-    <script src="script.js"></script>
-  
+    <script>
+      const catergoryItems = document.getElementById("category-items");
+      let result = "";
+      let existingCategory = [];
+      async function displayCatergory() {
+        try {
+          const response = await fetch("./features/products/products.json");
+          const products = await response.json();
+          console.log(products);
+          products.forEach((product) => {
+            if (existingCategory.includes(product.category)) return;
+            existingCategory.push(product.category);
+            result += `<li>
+            <img
+              src=${product.catergoryImage}
+              alt=""
+            />
+            <a href="./features/products/productsList.html?category=${product.category}">${product.category}</a>
+          </li>`;
+          });
+          catergoryItems.innerHTML = result;
+        } catch (error) {}
+      }
+
+      displayCatergory();
+    </script>
   </body>
 </html>
