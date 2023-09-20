@@ -1,4 +1,3 @@
-/* CSS styles inspired by Chaldal.com */
 .product-item {
   display: inline-block;
   margin: 20px;
@@ -31,9 +30,21 @@
   margin: 10px 0;
 }
 
-/* Optional: Center the product list on the page */
 #product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
 }

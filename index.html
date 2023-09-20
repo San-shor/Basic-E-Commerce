@@ -47,18 +47,17 @@
       let existingCategory = [];
       async function displayCatergory() {
         try {
-          const response = await fetch("./features/products/products.json");
-          const products = await response.json();
-          console.log(products);
-          products.forEach((product) => {
-            if (existingCategory.includes(product.category)) return;
-            existingCategory.push(product.category);
+          const response = await fetch("./features/products/category.json");
+          const catergories = await response.json();
+          console.log(catergories);
+          catergories.forEach((category) => {
+            // if (existingCategory.includes(product.category)) return;
+            // existingCategory.push(product.category);
             result += `<li>
-            <img
-              src=${product.catergoryImage}
-              alt=""
-            />
-            <a href="./features/products/productsList.html?category=${product.category}">${product.category}</a>
+              <img src="${category.image}" alt="${category.name}">
+            <a href="./features/products/productsList.html?category=${category.name}">
+              ${category.name}
+            </a>
           </li>`;
           });
           catergoryItems.innerHTML = result;

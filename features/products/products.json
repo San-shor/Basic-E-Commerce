@@ -3,42 +3,36 @@
     "name": "Product 1",
     "category": "fruits-vegetables",
     "price": 10.99,
-    "image": "https://chaldn.com/_mpimage/red-tomato-25-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D64361&q=best&v=1&m=400&webp=1",
-    "catergoryImage": "https://chaldn.com/_mpimage/fruits-vegetables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23769&q=low&v=1&m=400&webp=1"
+    "image": "https://chaldn.com/_mpimage/red-tomato-25-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D64361&q=best&v=1&m=400&webp=1"
   },
   {
     "name": "Product 2",
-    "category": "candy-choclate",
+    "category": "candy-chocolate",
     "price": 19.99,
-    "image": "https://chaldn.com/_mpimage/cocola-chocolate-wafer-roll-jar-230-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D127021&q=best&v=1&m=400&webp=1",
-    "catergoryImage": "https://chaldn.com/_mpimage/candy-chocolate?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D119184&q=low&v=1&m=400&webp=1"
+    "image": "https://chaldn.com/_mpimage/cocola-chocolate-wafer-roll-jar-230-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D127021&q=best&v=1&m=400&webp=1"
   },
   {
     "name": "Product 3",
     "category": "snacks",
     "price": 299.99,
-    "image": "https://chaldn.com/_mpimage/mr-noodles-cup-noodles-magic-masala-40-gm-bundle-offer-6-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D141170&q=best&v=1&m=400&webp=1",
-    "catergoryImage": "https://chaldn.com/_mpimage/fruits-vegetables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23769&q=low&v=1&m=400&webp=1"
+    "image": "https://chaldn.com/_mpimage/mr-noodles-cup-noodles-magic-masala-40-gm-bundle-offer-6-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D141170&q=best&v=1&m=400&webp=1"
   },
   {
     "name": "Product 4",
     "category": "snacks",
     "price": 49.95,
-    "image": "https://chaldn.com/_mpimage/kurkure-naughty-tomatochips-75-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D131767&q=best&v=1&m=400&webp=1",
-    "catergoryImage": "https://chaldn.com/_mpimage/fruits-vegetables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23769&q=low&v=1&m=400&webp=1"
+    "image": "https://chaldn.com/_mpimage/kurkure-naughty-tomatochips-75-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D131767&q=best&v=1&m=400&webp=1"
   },
   {
     "name": "Product 5",
     "category": "beverages",
     "price": 14.99,
-    "image": "https://chaldn.com/_mpimage/nestle-nescafe-classic-instant-coffee-jar-50-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D120414&q=best&v=1&m=400&webp=1",
-    "catergoryImage": "https://chaldn.com/_mpimage/fruits-vegetables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23769&q=low&v=1&m=400&webp=1"
+    "image": "https://chaldn.com/_mpimage/nestle-nescafe-classic-instant-coffee-jar-50-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D120414&q=best&v=1&m=400&webp=1"
   },
   {
     "name": "Product 6",
     "category": "fruits-vegetables",
     "price": 15.99,
-    "image": "https://chaldn.com/_mpimage/lal-peyaj-onion-red-imported-50-gm-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D69767&q=best&v=1&m=400&webp=1",
-    "catergoryImage": "https://chaldn.com/_mpimage/fruits-vegetables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23769&q=low&v=1&m=400&webp=1"
+    "image": "https://chaldn.com/_mpimage/lal-peyaj-onion-red-imported-50-gm-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D69767&q=best&v=1&m=400&webp=1"
   }
 ]

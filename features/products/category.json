@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "fruits-vegetables",
+    "image": "https://chaldn.com/_mpimage/fruits-vegetables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23769&q=low&v=1&m=400&webp=1"
+  },
+  {
+    "id": 2,
+    "name": "candy-chocolate",
+    "image": "https://chaldn.com/_mpimage/candy-chocolate?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D119184&q=low&v=1&m=400&webp=1"
+  },
+  {
+    "id": 3,
+    "name": "beverages",
+    "image": "https://chaldn.com/_mpimage/beverages?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23727&q=low&v=1&m=400&webp=1"
+  },
+  {
+    "id": 4,
+    "name": "snacks",
+    "image": "https://chaldn.com/_mpimage/snacks?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23741&q=low&v=1&m=400&webp=1"
+  }
+]

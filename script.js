@@ -16,7 +16,13 @@ async function displayProducts() {
                 <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p>${product.price}</p>
+                <button class="add-to-cart">Add to Cart</button>
+
             `;
+      const addToCartButton = productItem.querySelector(".add-to-cart");
+      addToCartButton.addEventListener("click", () => {
+        console.log(`Added ${product.name} to the cart.`);
+      });
       productList.appendChild(productItem);
     });
   } catch (error) {
