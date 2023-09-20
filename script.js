@@ -1,53 +1,31 @@
-async function displayProducts() {
-  const productDataUrl = "products.json";
-  const productList = document.getElementById("product-list");
-  let params = new URL(document.location).searchParams;
-  let category = params.get("category");
+const catergoryItems = document.getElementById("category-items");
+let result = "";
+let existingCategory = [];
 
-  let shoppingCart = [];
-
+// fetch data and show data on index page
+async function displayCatergory() {
   try {
-    const response = await fetch(productDataUrl);
-    const products = await response.json();
-
-    products.forEach((product) => {
-      if (product.category !== category) return;
-      const productItem = document.createElement("div");
-      productItem.classList.add("product-item");
-      productItem.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>${product.price}</p>
-                <button class="add-to-cart">Add to Cart</button>
-
-            `;
-
-      const addToCartButton = productItem.querySelector(".add-to-cart");
-      addToCartButton.addEventListener("click", () => {
-        const cartItem = {
-          name: product.name,
-          price: product.price,
-          quantity: 1,
-        };
-        const existingItem = shoppingCart.find(
-          (item) => item.name === cartItem.name
-        );
-        if (existingItem) {
-          existingItem.quantity++;
-        } else {
-          shoppingCart.push(cartItem);
-        }
-        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
-        console.log(shoppingCart);
-      });
-
-      productList.appendChild(productItem);
+    const response = await fetch("./features/products/category.json");
+    const catergories = await response.json();
+    console.log(catergories);
+    catergories.forEach((category) => {
+      // if (existingCategory.includes(product.category)) return;
+      // existingCategory.push(product.category);
+      result += `<li>
+              <img src="${category.image}" alt="${category.name}">
+            <a href="./features/products/productsList.html?category=${category.name}">
+              ${category.name}
+            </a>
+          </li>`;
     });
-  } catch (error) {
-    console.error("Error fetching product data:", error);
-  }
+    catergoryItems.innerHTML = result;
+  } catch (error) {}
 }
 
-window.addEventListener("load", function () {
-  displayProducts("");
+displayCatergory();
+
+// cart click event
+const cartLogo = document.getElementById("cart-logo");
+cartLogo.addEventListener("click", function () {
+  window.location.href = "./features/cart/cart.html";
 });
