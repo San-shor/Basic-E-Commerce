@@ -4,6 +4,8 @@ async function displayProducts() {
   let params = new URL(document.location).searchParams;
   let category = params.get("category");
 
+  let shoppingCart = [];
+
   try {
     const response = await fetch(productDataUrl);
     const products = await response.json();
@@ -19,10 +21,26 @@ async function displayProducts() {
                 <button class="add-to-cart">Add to Cart</button>
 
             `;
+
       const addToCartButton = productItem.querySelector(".add-to-cart");
       addToCartButton.addEventListener("click", () => {
-        console.log(`Added ${product.name} to the cart.`);
+        const cartItem = {
+          name: product.name,
+          price: product.price,
+          quantity: 1,
+        };
+        const existingItem = shoppingCart.find(
+          (item) => item.name === cartItem.name
+        );
+        if (existingItem) {
+          existingItem.quantity++;
+        } else {
+          shoppingCart.push(cartItem);
+        }
+        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+        console.log(shoppingCart);
       });
+
       productList.appendChild(productItem);
     });
   } catch (error) {
