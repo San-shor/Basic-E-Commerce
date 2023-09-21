@@ -29,10 +29,12 @@ async function displayProducts() {
       productItem.classList.add("product-item");
       productItem.innerHTML = `
                   <img src="${product.image}" alt="${product.name}">
-                  <h3>${product.name}</h3>
-                  <p>${product.price}</p>
-                  <button class="add-to-cart">Add to Cart</button>
-  
+                  <h5>${product.name}</h5>
+                  <p>&#2547;${product.price}</p>
+
+                  <button   class="add-to-cart">
+                  <img src="../../assets//cart.png"  >
+                  Add Cart</button>
               `;
 
       const addToCartButton = productItem.querySelector(".add-to-cart");
@@ -40,6 +42,7 @@ async function displayProducts() {
         const cartItem = {
           name: product.name,
           price: product.price,
+          image: product.image,
           quantity: 1,
         };
         addToCart(cartItem);
