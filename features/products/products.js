@@ -4,6 +4,10 @@ fetch("../../header.html")
   .then((response) => response.text())
   .then((data) => {
     navbarContainer.innerHTML = data;
+    const cartLogo = document.getElementById("cart-logo");
+    cartLogo.addEventListener("click", function () {
+      window.location.href = "/features/cart/cart.html";
+    });
   })
   .catch((error) => {
     console.error("Error loading the navigation bar:", error);

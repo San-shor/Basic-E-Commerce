@@ -25,8 +25,6 @@ async function displayCatergory() {
     const catergories = await response.json();
     console.log(catergories);
     catergories.forEach((category) => {
-      // if (existingCategory.includes(product.category)) return;
-      // existingCategory.push(product.category);
       result += `<li>
               <img src="${category.image}" alt="${category.name}">
             <a href="./features/products/productsList.html?category=${category.name}">
