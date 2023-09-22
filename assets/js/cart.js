@@ -1,56 +1,107 @@
-function getCurrentTotal() {
-  let subTotal = 0;
-  let total = 0;
+function createCartItemHTML(cartItem) {
+  const cartItemHTML = document.createElement("div");
 
+  cartItemHTML.classList.add("cart-item");
+  cartItemHTML.innerHTML = `
+    <img src="${cartItem.image}" alt="${cartItem.name}">
+    <h3>${cartItem.name}</h3>
+    <p> &#2547 ${cartItem.price}</p>
+    <div class="quantity-control">
+      <button class="decrease">-</button>
+      <input type="number" class="quantity-input" value="${cartItem.quantity}">
+      <button class="increase">+</button>
+    </div>
+    <img class="delete-item" src="../../assets/remove.png">
+    <p class="sub-total">Sub Total : ${(
+      cartItem.price * cartItem.quantity
+    ).toFixed(2)}</p>
+  `;
+
+  return cartItemHTML;
+}
+
+async function displayCart() {
+  const cartList = document.getElementById("cart-list");
+  cartList.innerHTML = "";
+  const savedCart = localStorage.getItem("shoppingCart");
+
+  if (!savedCart) {
+    return;
+  }
+
+  const cartItems = JSON.parse(savedCart);
+  let totalPrice = 0;
+
+  cartItems.forEach((cartItem, idx) => {
+    const cartItemHTML = createCartItemHTML(cartItem);
+    cartList.appendChild(cartItemHTML);
+
+    // Quantity input change handler
+    cartItemHTML
+      .querySelector(".quantity-input")
+      .addEventListener("input", (event) => {
+        const quantityInput = event.target;
+        const newQuantity = parseInt(quantityInput.value);
+
+        if (!isNaN(newQuantity) && newQuantity > 0) {
+          cartItems[idx].quantity = newQuantity;
+          localStorage.setItem("shoppingCart", JSON.stringify(cartItems));
+
+          // Update sub-total and total
+          const subTotal = cartItem.price * newQuantity;
+          totalPrice += subTotal;
+          cartItemHTML.querySelector(
+            ".sub-total"
+          ).textContent = `Sub Total : ${subTotal.toFixed(2)}`;
+          getCurrentTotal();
+        }
+      });
+
+    // Decrease button click handler
+    cartItemHTML.querySelector(".decrease").addEventListener("click", () => {
+      const quantityInput = cartItemHTML.querySelector(".quantity-input");
+      const newQuantity = parseInt(quantityInput.value) - 1;
+
+      if (newQuantity >= 1) {
+        quantityInput.value = newQuantity;
+        quantityInput.dispatchEvent(new Event("input"));
+      }
+    });
+
+    // Increase button click handler
+    cartItemHTML.querySelector(".increase").addEventListener("click", () => {
+      const quantityInput = cartItemHTML.querySelector(".quantity-input");
+      const newQuantity = parseInt(quantityInput.value) + 1;
+      quantityInput.value = newQuantity;
+      quantityInput.dispatchEvent(new Event("input"));
+    });
+
+    // Delete item click handler
+    cartItemHTML.querySelector(".delete-item").addEventListener("click", () => {
+      cartItems.splice(idx, 1);
+      localStorage.setItem("shoppingCart", JSON.stringify(cartItems));
+      cartItemHTML.remove();
+      getCurrentTotal();
+    });
+  });
+
+  getCurrentTotal();
+}
+
+function getCurrentTotal() {
   const savedCart = localStorage.getItem("shoppingCart");
   const cartItems = JSON.parse(savedCart);
+  let total = 0;
+
   cartItems.forEach((item) => {
-    subTotal = item.price * item.quantity;
-    total += subTotal;
+    total += item.price * item.quantity;
   });
+
   const totalPriceElement = document.getElementById("total-price");
   if (totalPriceElement) {
     totalPriceElement.textContent = `Total Price: ${total.toFixed(2)}`;
   }
   localStorage.setItem("totalPrice", total.toFixed(2));
-}
-
-async function displayCart() {
-  const cartList = document.getElementById("cart-list");
-
-  const savedCart = localStorage.getItem("shoppingCart");
-  if (!savedCart) {
-    return;
-  }
-  const cartItems = JSON.parse(savedCart);
-  let totalPrice = 0;
-  let subTotal = 0;
-
-  cartItems.forEach((cartItem, idx) => {
-    subTotal = cartItem.price * cartItem.quantity;
-    totalPrice += subTotal;
-    const cartItemElement = document.createElement("div");
-    cartItemElement.classList.add("cart-item");
-    cartItemElement.innerHTML = `
-        <img src="${cartItem.image}" alt="${cartItem.name}">
-        <h3>${cartItem.name}</h3>
-        <p>Price: &#2547 ${cartItem.price}</p>
-        <p>Quantity: ${cartItem.quantity}</p>
-        <img  class ="delete-item"
-        src="../../assets//remove.png"  >
-        <p>Sub Total : ${subTotal}</p>
-      `;
-    cartList.appendChild(cartItemElement);
-
-    const deleteItem = cartItemElement.querySelector(".delete-item");
-    deleteItem.addEventListener("click", () => {
-      cartItems.splice(idx, 1);
-      localStorage.setItem("shoppingCart", JSON.stringify(cartItems));
-      cartItemElement.remove();
-      getCurrentTotal();
-    });
-  });
-  getCurrentTotal();
 }
 
 export { displayCart };

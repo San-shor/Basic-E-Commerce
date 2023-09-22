@@ -55,6 +55,7 @@ async function displayProducts() {
           quantity: 1,
         };
         addToCart(cartItem);
+        displayCart();
       });
 
       productList.appendChild(productItem);
@@ -86,7 +87,7 @@ function addToCart(product) {
 
     setTimeout(() => {
       successMessage.classList.add("hidden");
-    }, 4000);
+    }, 2000);
   }
 }
 
