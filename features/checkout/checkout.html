@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <div class="checkout-container">
+      <section class="customer-information">
+        <form>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="Your Firstname"
+            required
+          />
+          <br />
+
+          <input
+            type="text"
+            name="lastname"
+            placeholder="Your Lastname"
+            required
+          />
+          <br />
+
+          <input type="email" name="email" placeholder="Email" required />
+          <br />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <br />
+          <input
+            type="text"
+            name="address"
+            placeholder="Shipping Address"
+            required
+          />
+        </form>
+      </section>
+
+      <section class="order-summary" id="cart-list">
+        <h2>Order Summary</h2>
+      </section>
+      <section class="payment-details">
+        <h2>Payment Details</h2>
+        <form>
+          <!-- Input fields for card number, expiration date, CVV, cardholder name -->
+        </form>
+      </section>
+      <button class="checkout-button">Place Order</button>
+    </div>
+    <script src="checkout.js" type="module"></script>
+  </body>
+</html>

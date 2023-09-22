@@ -1,0 +1,61 @@
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the top of the container */
+  gap: 20px; /* Add some spacing between customer info and order summary */
+}
+
+.customer-information {
+  flex: 1; /* Take up available space in the flex container */
+  /* Add your customer information styles here */
+}
+
+.order-summary {
+  flex: 1; /* Take up available space in the flex container */
+  /* Add your order summary styles here */
+}
+
+.customer-information h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Style for the form inputs */
+.customer-information input[type="text"],
+.customer-information input[type="email"],
+.customer-information input[type="tel"] {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for the form input on focus */
+.customer-information input[type="text"]:focus,
+.customer-information input[type="email"]:focus,
+.customer-information input[type="tel"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Style for form input placeholders */
+.customer-information input::placeholder {
+  color: #777;
+}
+
+/* Style for form input hover effect */
+.customer-information input:hover {
+  border-color: #666;
+}
+
+/* Style for invalid form input */
+/* .customer-information input:invalid {
+  border-color: #ff0000;
+} */
+
+/* Style for valid form input */
+.customer-information input:valid {
+  border-color: #00cc00;
+}

@@ -104,4 +104,13 @@ function getCurrentTotal() {
   localStorage.setItem("totalPrice", total.toFixed(2));
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const checkoutPage = document.getElementById("checkout-button");
+  if (checkoutPage) {
+    checkoutPage.addEventListener("click", () => {
+      window.location.href = "../../features/checkout/checkout.html";
+    });
+  }
+});
+
 export { displayCart };
