@@ -10,12 +10,27 @@
   </head>
   <body>
     <header id="navbar-container"></header>
+    <!-- Cart Slider -->
+    <div id="cart-slider" class="slider">
+      <img src="./assets/close.png" class="close-icon" id="close-icon" />
+
+      <!-- Add your slider content here -->
+      <div class="slider-content" id="cart-list">
+        <!-- Content of the cart slider goes here -->
+      </div>
+      <footer>
+        <div class="total" id="total-price"></div>
+
+        <button class="checkout-button">Checkout</button>
+      </footer>
+    </div>
+
     <main>
       <div id="category-links">
         <ul id="category-items"></ul>
       </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>

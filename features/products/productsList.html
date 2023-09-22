@@ -3,17 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="productList.css" />
     <link rel="stylesheet" href="../../assets/header.css" />
+
     <title>Products</title>
   </head>
   <body>
     <header id="navbar-container"></header>
+    <div id="cart-slider" class="slider">
+      <img src="../../assets/close.png" class="close-icon" id="close-icon" />
+
+      <!-- Add your slider content here -->
+      <div class="slider-content" id="cart-list">
+        <!-- Content of the cart slider goes here -->
+      </div>
+      <footer>
+        <div class="total" id="total-price"></div>
+
+        <button class="checkout-button">Checkout</button>
+      </footer>
+    </div>
     <div id="success-message" class="hidden"></div>
     <div id="product-list">
       <!-- Products will be dynamically inserted here -->
     </div>
-    <script src="products.js"></script>
+    <script src="products.js" type="module"></script>
   </body>
 </html>

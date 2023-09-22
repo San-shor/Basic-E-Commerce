@@ -1,12 +1,21 @@
+import { displayCart } from "../../assets/js/cart.js";
+
 const navbarContainer = document.getElementById("navbar-container");
+const cartSlider = document.getElementById("cart-slider");
+const closeIcon = document.getElementById("close-icon");
 
 fetch("../../header.html")
   .then((response) => response.text())
   .then((data) => {
     navbarContainer.innerHTML = data;
     const cartLogo = document.getElementById("cart-logo");
+
     cartLogo.addEventListener("click", function () {
-      window.location.href = "/features/cart/cart.html";
+      cartSlider.classList.toggle("right-slide");
+    });
+
+    closeIcon.addEventListener("click", function () {
+      cartSlider.classList.remove("right-slide");
     });
   })
   .catch((error) => {
@@ -84,3 +93,4 @@ function addToCart(product) {
 window.addEventListener("load", function () {
   displayProducts("");
 });
+displayCart();

@@ -1,3 +1,20 @@
+function getCurrentTotal() {
+  let subTotal = 0;
+  let total = 0;
+
+  const savedCart = localStorage.getItem("shoppingCart");
+  const cartItems = JSON.parse(savedCart);
+  cartItems.forEach((item) => {
+    subTotal = item.price * item.quantity;
+    total += subTotal;
+  });
+  const totalPriceElement = document.getElementById("total-price");
+  if (totalPriceElement) {
+    totalPriceElement.textContent = `Total Price: ${total.toFixed(2)}`;
+  }
+  localStorage.setItem("totalPrice", total.toFixed(2));
+}
+
 async function displayCart() {
   const cartList = document.getElementById("cart-list");
 
@@ -5,25 +22,9 @@ async function displayCart() {
   if (!savedCart) {
     return;
   }
-
   const cartItems = JSON.parse(savedCart);
-  console.log(cartItems);
-
   let totalPrice = 0;
   let subTotal = 0;
-
-  function getCurrentTotal() {
-    let total = 0;
-    cartItems.forEach((item) => {
-      subTotal = item.price * item.quantity;
-      total += subTotal;
-    });
-    const totalPriceElement = document.getElementById("total-price");
-    if (totalPriceElement) {
-      totalPriceElement.textContent = `Total Price: ${total.toFixed(2)}`;
-    }
-    localStorage.setItem("totalPrice", total.toFixed(2));
-  }
 
   cartItems.forEach((cartItem, idx) => {
     subTotal = cartItem.price * cartItem.quantity;
@@ -52,6 +53,4 @@ async function displayCart() {
   getCurrentTotal();
 }
 
-window.addEventListener("load", function () {
-  displayCart();
-});
+export { displayCart };
