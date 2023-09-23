@@ -8,9 +8,9 @@ function createCartItemHTML(cartItem) {
     <p class="sub-total">৳ ${cartItem.price * cartItem.quantity}</p>
   
     <div class="quantity-control">
-      <button class="decrease">-</button>
-      <input type="number" class="quantity-input" value="${cartItem.quantity}">
       <button class="increase">+</button>
+      <input type="number" class="quantity-input" value="${cartItem.quantity}">
+      <button class="decrease">-</button>
     </div>
     <img class="delete-item" src="../../assets/trash-bin.png">
   `;
