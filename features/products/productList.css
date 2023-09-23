@@ -49,6 +49,18 @@
   vertical-align: middle;
 }
 
+.success__message {
+  position: absolute;
+  top: 5rem;
+  left: 0.3rem;
+  transition: 0.3s left;
+  background-color: #89c74a;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
 .hidden {
-  display: none;
+  left: -100%;
 }
