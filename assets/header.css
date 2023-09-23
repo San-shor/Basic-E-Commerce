@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 3rem;
   background-color: #dfffc0;
   color: #89c74a;
 }
@@ -58,4 +58,5 @@ nav ul li a:hover {
   width: 32px;
   height: 32px;
   color: #89c74a;
+  cursor: pointer;
 }
