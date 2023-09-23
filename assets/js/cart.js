@@ -78,7 +78,6 @@ async function displayCart() {
 
     // Delete item click handler
     cartItemHTML.querySelector(".delete-item").addEventListener("click", () => {
-      //cartItems = cartItems.splice(idx, 1);
       cartItems = cartItems.filter((item, index) => index != idx);
       localStorage.setItem("shoppingCart", JSON.stringify(cartItems));
       cartItemHTML.remove();

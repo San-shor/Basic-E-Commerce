@@ -47,7 +47,6 @@ function openModal() {
   modalCustomerInfo.appendChild(modalContent);
 
   modal.style.display = "block";
-  // modalCustomerInfo.style.display = "block";
   overlay.style.display = "block";
 }
 
