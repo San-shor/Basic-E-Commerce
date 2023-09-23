@@ -27,6 +27,7 @@ async function displayProducts() {
   const productList = document.getElementById("product-list");
   let params = new URL(document.location).searchParams;
   let category = params.get("category");
+  console.log(category);
 
   try {
     const response = await fetch(productDataUrl);

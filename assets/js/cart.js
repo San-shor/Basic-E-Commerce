@@ -3,18 +3,18 @@ function createCartItemHTML(cartItem) {
 
   cartItemHTML.classList.add("cart-item");
   cartItemHTML.innerHTML = `
-    <img src="${cartItem.image}" alt="${cartItem.name}">
-    <h3>${cartItem.name}</h3>
-    <p> &#2547 ${cartItem.price}</p>
+    <img class="item-img" src="${cartItem.image}" alt="${cartItem.name}">
+    <p>${cartItem.name}</p>
+    <p class="sub-total">&#2547  ${cartItem.price * cartItem.quantity}</p>
+  
     <div class="quantity-control">
       <button class="decrease">-</button>
       <input type="number" class="quantity-input" value="${cartItem.quantity}">
       <button class="increase">+</button>
+      <img class="delete-item" src="../../assets/trash-bin.png">
     </div>
-    <img class="delete-item" src="../../assets/remove.png">
-    <p class="sub-total">Sub Total : ${(
-      cartItem.price * cartItem.quantity
-    ).toFixed(2)}</p>
+    
+   
   `;
 
   return cartItemHTML;
@@ -99,9 +99,9 @@ function getCurrentTotal() {
 
   const totalPriceElement = document.getElementById("total-price");
   if (totalPriceElement) {
-    totalPriceElement.textContent = `Total Price: ${total.toFixed(2)}`;
+    totalPriceElement.textContent = `Total Price:  ৳${total}`;
   }
-  localStorage.setItem("totalPrice", total.toFixed(2));
+  localStorage.setItem("totalPrice", total);
 }
 
 document.addEventListener("DOMContentLoaded", function () {

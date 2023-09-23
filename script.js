@@ -33,12 +33,15 @@ async function displayCatergory() {
     const catergories = await response.json();
     console.log(catergories);
     catergories.forEach((category) => {
-      result += `<li>
-              <img src="${category.image}" alt="${category.name}">
-            <a href="./features/products/productsList.html?category=${category.name}">
-              ${category.name}
-            </a>
-          </li>`;
+      result += `<li class="category-item">
+      <a href="./features/products/productsList.html?category=${category.name}">
+        <div class="category-image">
+          <img src="${category.image}" alt="${category.name}">
+        </div>
+        ${category.name}
+      </a>
+    </li>
+    `;
     });
     catergoryItems.innerHTML = result;
   } catch (error) {}
