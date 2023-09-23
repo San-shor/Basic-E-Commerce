@@ -51,6 +51,27 @@ function closeModal() {
   modal.style.display = "none";
   overlay.style.display = "none";
 }
+
+function fillFormInfoFromLocalStorage() {
+  const shippingAddress = localStorage.getItem("checkoutInfo")
+    ? JSON.parse(localStorage.getItem("checkoutInfo"))
+    : {};
+  if (shippingAddress.firstname) {
+    const firstNameInputEl = document.getElementById("firstname");
+    const lastNameInputEl = document.getElementById("lastname");
+    const emailInputEl = document.getElementById("email");
+    const phoneInputEl = document.getElementById("phone");
+    const addressInputEl = document.getElementById("address");
+    firstNameInputEl.value = shippingAddress.firstname;
+    lastNameInputEl.value = shippingAddress.lastname;
+    emailInputEl.value = shippingAddress.email;
+    phoneInputEl.value = shippingAddress.phone;
+    addressInputEl.value = shippingAddress.address;
+  }
+}
+
+fillFormInfoFromLocalStorage();
+
 checkoutButton.addEventListener("click", SaveCustomerInfo);
 closeButton.addEventListener("click", closeModal);
 
