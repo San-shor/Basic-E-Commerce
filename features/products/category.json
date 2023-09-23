@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Fruits&Vegetables",
+    "name": "Fruits & Vegetables",
     "image": "../../assets/fruits-veg.png"
   },
   {
     "id": 2,
-    "name": "Candy&Chocolate",
+    "name": "Candy & Chocolate",
     "image": "../../assets/candy-chocolate.png"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "id": 5,
-    "name": "Meat&Fish",
+    "name": "Meat & Fish",
     "image": "../../assets/meat-fish.png"
   },
   {

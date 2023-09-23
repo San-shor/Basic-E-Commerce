@@ -34,7 +34,7 @@ async function displayCatergory() {
     console.log(catergories);
     catergories.forEach((category) => {
       result += `<li class="category-item">
-      <a href="./features/products/productsList.html?category=${category.name}">
+      <a href="./features/products/productsList.html?categoryId=${category.id}">
         <div class="category-image">
           <img src="${category.image}" alt="${category.name}">
         </div>
