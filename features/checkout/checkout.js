@@ -1,4 +1,4 @@
-import { displayCart } from "../../assets/js/cart.js";
+import { clearCart, displayCart } from "../../assets/js/cart.js";
 
 displayCart();
 
@@ -20,6 +20,7 @@ function SaveCustomerInfo(event) {
 }
 
 const checkoutButton = document.querySelector(".checkout-button");
+const modalCustomerInfo = document.getElementById("modal-customer-info");
 const modal = document.getElementById("myModal");
 const overlay = document.getElementById("overlay");
 const closeButton = document.querySelector(".close");
@@ -41,15 +42,20 @@ function openModal() {
     modalContent.appendChild(infoParagraph);
   }
 
-  modal.appendChild(modalContent);
+  modalCustomerInfo.innerHTML = "";
+
+  modalCustomerInfo.appendChild(modalContent);
 
   modal.style.display = "block";
+  // modalCustomerInfo.style.display = "block";
   overlay.style.display = "block";
 }
 
 function closeModal() {
   modal.style.display = "none";
   overlay.style.display = "none";
+  clearCart();
+  document.location.href = "/";
 }
 
 function fillFormInfoFromLocalStorage() {

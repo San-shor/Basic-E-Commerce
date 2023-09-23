@@ -114,4 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-export { displayCart };
+function clearCart() {
+  localStorage.setItem("shoppingCart", JSON.stringify([]));
+}
+
+export { displayCart, clearCart };
