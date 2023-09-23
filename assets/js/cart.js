@@ -5,16 +5,14 @@ function createCartItemHTML(cartItem) {
   cartItemHTML.innerHTML = `
     <img class="item-img" src="${cartItem.image}" alt="${cartItem.name}">
     <p>${cartItem.name}</p>
-    <p class="sub-total">&#2547  ${cartItem.price * cartItem.quantity}</p>
+    <p class="sub-total">৳ ${cartItem.price * cartItem.quantity}</p>
   
     <div class="quantity-control">
       <button class="decrease">-</button>
       <input type="number" class="quantity-input" value="${cartItem.quantity}">
       <button class="increase">+</button>
-      <img class="delete-item" src="../../assets/trash-bin.png">
     </div>
-    
-   
+    <img class="delete-item" src="../../assets/trash-bin.png">
   `;
 
   return cartItemHTML;
@@ -52,7 +50,7 @@ async function displayCart() {
           totalPrice += subTotal;
           cartItemHTML.querySelector(
             ".sub-total"
-          ).textContent = `Sub Total : ${subTotal.toFixed(2)}`;
+          ).textContent = `৳ ${subTotal.toFixed(2)}`;
           getCurrentTotal();
         }
       });
