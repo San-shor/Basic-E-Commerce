@@ -69,6 +69,14 @@ main h3 {
   color: #333;
 }
 
+#category-items {
+  align-items: baseline;
+}
+
+.category-image {
+  margin-bottom: 1rem;
+}
+
 /* CSS for the cart slider */
 .slider {
   position: fixed;
