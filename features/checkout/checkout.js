@@ -123,10 +123,12 @@ function openModal() {
 
   if (savedCheckoutInfo) {
     const infoParagraph = document.createElement("p");
-    infoParagraph.innerHTML = `Customer Information:<br/>`;
+    infoParagraph.innerHTML = `Customer Information<br/>`;
 
     for (const key in savedCheckoutInfo) {
-      infoParagraph.innerHTML += `${key}: ${savedCheckoutInfo[key]}<br/>`;
+      infoParagraph.innerHTML += `${
+        key.charAt(0).toUpperCase() + key.slice(1)
+      }: ${savedCheckoutInfo[key]}<br/>`;
     }
 
     modalContent.appendChild(infoParagraph);
