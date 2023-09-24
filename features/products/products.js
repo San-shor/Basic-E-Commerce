@@ -41,12 +41,15 @@ async function displayProducts() {
       productItem.classList.add("product-item");
       productItem.innerHTML = `
                   <img src="${product.image}" alt="${product.name}">
-                  <h5>${product.name}</h5>
-                  <p>&#2547;${product.price}</p>
+                  <h5 class="product__item-name">${product.name}</h5>
+                  <div class="product__item-info">
+                    <button class="add-to-cart">
+                    <img src="../../assets//cart.png"  >Add To Cart
+                    </button>
+                    <p class="product__item-price">&#2547;${product.price}</p>
+                  </div>
 
-                  <button   class="add-to-cart">
-                  <img src="../../assets//cart.png"  >
-                  Add Cart</button>
+                  
               `;
 
       const addToCartButton = productItem.querySelector(".add-to-cart");
