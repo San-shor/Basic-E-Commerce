@@ -4,10 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
-
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../assets/header.css" />
     <link rel="stylesheet" href="checkout.css" />
   </head>
   <body>
+    <header id="navbar-container"></header>
+    <div id="cart-slider" class="slider">
+      <img src="../../assets/close.png" class="close-icon" id="close-icon" />
+
+      <div class="slider-content" id="cart-list"></div>
+      <footer>
+        <div class="total" id="total-price"></div>
+
+        <button class="checkout-button" id="checkout-button">Checkout</button>
+      </footer>
+    </div>
     <div class="checkout-container">
       <section class="customer-information">
         <h3>Customer Information</h3>
@@ -52,13 +64,19 @@
             required
             id="address"
           ></textarea>
-          <button class="checkout-button" type="submit">Place Order</button>
+          <button
+            class="checkout-button"
+            id="checkout-place-order-button"
+            type="submit"
+          >
+            Place Order
+          </button>
         </form>
       </section>
 
       <section class="order-summary">
         <h3>Order Summary</h3>
-        <section id="cart-list"></section>
+        <section id="cart-list-summary"></section>
       </section>
     </div>
     <div id="myModal" class="modal">

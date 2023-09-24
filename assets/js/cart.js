@@ -115,4 +115,4 @@ function clearCart() {
   localStorage.setItem("shoppingCart", JSON.stringify([]));
 }
 
-export { displayCart, clearCart };
+export { displayCart, clearCart, createCartItemHTML };
