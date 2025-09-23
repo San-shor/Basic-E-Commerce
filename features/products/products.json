@@ -4,41 +4,62 @@
     "category": "Fruits & Vegetables",
     "categoryId": 1,
     "price": 10,
-    "image": "https://chaldn.com/_mpimage/red-tomato-25-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D64361&q=best&v=1&m=400&webp=1"
+    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=300&h=300&fit=crop&crop=center"
   },
   {
     "name": "Cocola Chocolate Wafer Rolls",
     "category": "Candy & Chocolate",
     "categoryId": 2,
     "price": 19,
-    "image": "https://chaldn.com/_mpimage/cocola-chocolate-wafer-rolls-50-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D127025&q=best&v=1&m=400&webp=1"
+    "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=300&h=300&fit=crop&crop=center"
   },
   {
     "name": "Mr. Noodles Cup Noodles Magic Masala 40 gm  (Bundle Offer)",
     "category": "Snacks",
     "categoryId": 4,
     "price": 299,
-    "image": "https://chaldn.com/_mpimage/mr-noodles-cup-noodles-magic-masala-40-gm-bundle-offer-6-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D141170&q=best&v=1&m=400&webp=1"
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=300&h=300&fit=crop&crop=center"
   },
   {
     "name": "kurkure chips",
     "category": "Snacks",
     "categoryId": 4,
     "price": 49,
-    "image": "https://chaldn.com/_mpimage/kurkure-naughty-tomatochips-75-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D131767&q=best&v=1&m=400&webp=1"
+    "image": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=300&h=300&fit=crop&crop=center"
   },
   {
     "name": "Nestle Nescafe Classic Instant Coffee Jar",
     "category": "Beverages",
     "categoryId": 3,
     "price": 14,
-    "image": "https://chaldn.com/_mpimage/nestle-nescafe-classic-instant-coffee-jar-50-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D120414&q=best&v=1&m=400&webp=1"
+    "image": "https://images.unsplash.com/photo-1610632380989-680fe40816c6?w=300&h=300&fit=crop&crop=center"
   },
   {
     "name": "Onion",
     "category": "Fruits&Vegetables",
     "categoryId": 1,
     "price": 15,
-    "image": "https://chaldn.com/_mpimage/lal-peyaj-onion-red-imported-50-gm-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D69767&q=best&v=1&m=400&webp=1"
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Banana",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 8,
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Green Lettuce",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 12,
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Orange",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 18,
+    "image": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=300&fit=crop&crop=center"
   }
 ]

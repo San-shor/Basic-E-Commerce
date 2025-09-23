@@ -6,23 +6,81 @@
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="productList.css" />
     <link rel="stylesheet" href="../../assets/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
     <title>Products</title>
   </head>
   <body>
     <header id="navbar-container"></header>
+
+    <!-- Cart Slider -->
     <div id="cart-slider" class="slider">
       <img src="../../assets/close.png" class="close-icon" id="close-icon" />
-
       <div class="slider-content" id="cart-list"></div>
       <footer>
         <div class="total" id="total-price"></div>
-
         <button class="checkout-button" id="checkout-button">Checkout</button>
       </footer>
     </div>
+
+    <!-- Success Message -->
     <div id="success-message" class="success__message hidden"></div>
-    <div id="product-list"></div>
+
+    <!-- Main Content -->
+    <main class="products-page">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb">
+        <a href="../../index.html" class="breadcrumb-link">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current" id="current-category">Products</span>
+      </nav>
+
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="header-content">
+          <h1 class="page-title" id="category-title">Our Products</h1>
+          <p class="page-subtitle" id="category-description">
+            Discover our fresh and quality products
+          </p>
+        </div>
+        <div class="header-actions">
+          <button class="back-button" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section class="products-section">
+        <div class="products-header">
+          <h2 class="section-title">Available Products</h2>
+          <div class="products-count" id="products-count">Loading...</div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-list" class="product-grid"></div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state hidden">
+          <div class="empty-state-content">
+            <i class="fas fa-box-open empty-icon"></i>
+            <h3>No Products Found</h3>
+            <p>
+              Sorry, there are no products available in this category at the
+              moment.
+            </p>
+            <a href="../../index.html" class="return-home-btn"
+              >Return to Home</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="products.js" type="module"></script>
   </body>
 </html>
