@@ -4,28 +4,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./assets/header.css" />
-    <title>E-Commerce Website</title>
+    <title>FreshMart - Online Grocery Store</title>
   </head>
   <body>
     <header id="navbar-container"></header>
+
+    <!-- Cart Slider -->
     <div id="cart-slider" class="slider">
-      <img src="./assets/close.png" class="close-icon" id="close-icon" />
+      <div class="cart-header">
+        <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+        <button class="close-icon" id="close-icon" aria-label="Close cart">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
 
       <div class="slider-content" id="cart-list"></div>
-      <footer>
+      <footer class="cart-footer">
         <div class="total" id="total-price"></div>
-
-        <button class="checkout-button" id="checkout-button">Checkout</button>
+        <button class="checkout-button" id="checkout-button">
+          <i class="fas fa-credit-card"></i> Checkout
+        </button>
       </footer>
     </div>
 
-    <main>
-      <div id="category-links">
-        <ul id="category-items"></ul>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Fresh Groceries Delivered to Your Door</h1>
+          <p class="hero-subtitle">
+            Shop from our wide selection of fresh produce, pantry essentials,
+            and everyday needs. Fast delivery, great prices, and quality
+            guaranteed.
+          </p>
+          <div class="hero-stats">
+            <div class="stat">
+              <i class="fas fa-truck"></i>
+              <span>Free Delivery</span>
+            </div>
+            <div class="stat">
+              <i class="fas fa-clock"></i>
+              <span>30min Delivery</span>
+            </div>
+            <div class="stat">
+              <i class="fas fa-leaf"></i>
+              <span>Fresh Products</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-container">
+            <i class="fas fa-shopping-basket hero-icon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <main class="categories-section">
+      <div class="section-header">
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle">
+          Browse our carefully curated categories to find exactly what you need
+        </p>
+      </div>
+      <div class="categories-container">
+        <ul id="category-items" class="categories-grid"></ul>
       </div>
     </main>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="features-container">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Get your groceries delivered in 30 minutes or less</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Quality Guarantee</h3>
+          <p>100% fresh products or your money back</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Customer support available around the clock</p>
+        </div>
+      </div>
+    </section>
 
     <script src="script.js" type="module"></script>
   </body>
