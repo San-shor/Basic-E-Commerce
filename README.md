@@ -2,7 +2,7 @@
 
 A beautiful, responsive online grocery store with modern UI/UX design, built with vanilla web technologies.
 
-## ✨ Features
+## Live Link : [https://e-commerce-supermarket.netlify.app/]
 
 ### 🔧 Functionality
 
