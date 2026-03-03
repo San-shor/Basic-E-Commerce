@@ -1,42 +1,14 @@
 [
   {
-    "name": "Tomato",
+    "name": "Fresh Tomato",
     "category": "Fruits & Vegetables",
     "categoryId": 1,
     "price": 10,
     "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=300&h=300&fit=crop&crop=center"
   },
   {
-    "name": "Cocola Chocolate Wafer Rolls",
-    "category": "Candy & Chocolate",
-    "categoryId": 2,
-    "price": 19,
-    "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=300&h=300&fit=crop&crop=center"
-  },
-  {
-    "name": "Mr. Noodles Cup Noodles Magic Masala 40 gm  (Bundle Offer)",
-    "category": "Snacks",
-    "categoryId": 4,
-    "price": 299,
-    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=300&h=300&fit=crop&crop=center"
-  },
-  {
-    "name": "kurkure chips",
-    "category": "Snacks",
-    "categoryId": 4,
-    "price": 49,
-    "image": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=300&h=300&fit=crop&crop=center"
-  },
-  {
-    "name": "Nestle Nescafe Classic Instant Coffee Jar",
-    "category": "Beverages",
-    "categoryId": 3,
-    "price": 14,
-    "image": "https://images.unsplash.com/photo-1610632380989-680fe40816c6?w=300&h=300&fit=crop&crop=center"
-  },
-  {
-    "name": "Onion",
-    "category": "Fruits&Vegetables",
+    "name": "Red Onion",
+    "category": "Fruits & Vegetables",
     "categoryId": 1,
     "price": 15,
     "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=300&h=300&fit=crop&crop=center"
@@ -61,5 +33,390 @@
     "categoryId": 1,
     "price": 18,
     "image": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Strawberry Pack",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 45,
+    "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Green Apple",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 22,
+    "image": "https://images.unsplash.com/photo-1569870499705-504209102861?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Carrots",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 14,
+    "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Red Bell Pepper",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 25,
+    "image": "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Broccoli",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 30,
+    "image": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Watermelon",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 50,
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Mango",
+    "category": "Fruits & Vegetables",
+    "categoryId": 1,
+    "price": 35,
+    "image": "https://images.unsplash.com/photo-1553279768-865429fa0078?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Cocola Chocolate Wafer Rolls",
+    "category": "Candy & Chocolate",
+    "categoryId": 2,
+    "price": 19,
+    "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Dark Chocolate Bar",
+    "category": "Candy & Chocolate",
+    "categoryId": 2,
+    "price": 35,
+    "image": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Milk Chocolate Truffles",
+    "category": "Candy & Chocolate",
+    "categoryId": 2,
+    "price": 55,
+    "image": "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Gummy Bears Pack",
+    "category": "Candy & Chocolate",
+    "categoryId": 2,
+    "price": 25,
+    "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "White Chocolate Cookies",
+    "category": "Candy & Chocolate",
+    "categoryId": 2,
+    "price": 40,
+    "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Caramel Toffee Bag",
+    "category": "Candy & Chocolate",
+    "categoryId": 2,
+    "price": 15,
+    "image": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Hazelnut Chocolate Spread",
+    "category": "Candy & Chocolate",
+    "categoryId": 2,
+    "price": 65,
+    "image": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Assorted Candy Mix",
+    "category": "Candy & Chocolate",
+    "categoryId": 2,
+    "price": 30,
+    "image": "https://images.unsplash.com/photo-1581798459219-318e76aecc7b?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Nescafe Classic Coffee Jar",
+    "category": "Beverages",
+    "categoryId": 3,
+    "price": 14,
+    "image": "https://images.unsplash.com/photo-1610632380989-680fe40816c6?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Green Tea Box (25 bags)",
+    "category": "Beverages",
+    "categoryId": 3,
+    "price": 45,
+    "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Orange Juice 1L",
+    "category": "Beverages",
+    "categoryId": 3,
+    "price": 60,
+    "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Mineral Water Pack (6x1.5L)",
+    "category": "Beverages",
+    "categoryId": 3,
+    "price": 80,
+    "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Mango Smoothie Bottle",
+    "category": "Beverages",
+    "categoryId": 3,
+    "price": 35,
+    "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Cola Soft Drink 2L",
+    "category": "Beverages",
+    "categoryId": 3,
+    "price": 40,
+    "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Lemonade Fresh Bottle",
+    "category": "Beverages",
+    "categoryId": 3,
+    "price": 25,
+    "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Hot Cocoa Mix Pack",
+    "category": "Beverages",
+    "categoryId": 3,
+    "price": 55,
+    "image": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Cup Noodles Magic Masala",
+    "category": "Snacks",
+    "categoryId": 4,
+    "price": 299,
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Kurkure Chips Pack",
+    "category": "Snacks",
+    "categoryId": 4,
+    "price": 49,
+    "image": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Salted Cashew Nuts 200g",
+    "category": "Snacks",
+    "categoryId": 4,
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1604848698030-c434ba08ece1?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Popcorn Butter Flavor",
+    "category": "Snacks",
+    "categoryId": 4,
+    "price": 35,
+    "image": "https://images.unsplash.com/photo-1578849278619-e73505e9610f?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Tortilla Chips & Salsa",
+    "category": "Snacks",
+    "categoryId": 4,
+    "price": 85,
+    "image": "https://images.unsplash.com/photo-1600952841320-db92ec4047ca?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Mixed Dried Fruits 300g",
+    "category": "Snacks",
+    "categoryId": 4,
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Crispy Pretzels Bag",
+    "category": "Snacks",
+    "categoryId": 4,
+    "price": 45,
+    "image": "https://images.unsplash.com/photo-1562967914-01efa7e87832?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Trail Mix Energy Pack",
+    "category": "Snacks",
+    "categoryId": 4,
+    "price": 95,
+    "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Chicken Breast 500g",
+    "category": "Meat & Fish",
+    "categoryId": 5,
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82571?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Atlantic Salmon Fillet",
+    "category": "Meat & Fish",
+    "categoryId": 5,
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Beef Steak Premium Cut",
+    "category": "Meat & Fish",
+    "categoryId": 5,
+    "price": 420,
+    "image": "https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Shrimp 500g",
+    "category": "Meat & Fish",
+    "categoryId": 5,
+    "price": 280,
+    "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Lamb Chops Pack",
+    "category": "Meat & Fish",
+    "categoryId": 5,
+    "price": 380,
+    "image": "https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Tuna Steak Fresh",
+    "category": "Meat & Fish",
+    "categoryId": 5,
+    "price": 220,
+    "image": "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Ground Turkey 400g",
+    "category": "Meat & Fish",
+    "categoryId": 5,
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Fresh Tilapia Fish",
+    "category": "Meat & Fish",
+    "categoryId": 5,
+    "price": 140,
+    "image": "https://images.unsplash.com/photo-1510130387422-82bed34b37e9?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "All-Purpose Flour 1kg",
+    "category": "Baking",
+    "categoryId": 6,
+    "price": 45,
+    "image": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Pure Vanilla Extract",
+    "category": "Baking",
+    "categoryId": 6,
+    "price": 85,
+    "image": "https://images.unsplash.com/photo-1631209121750-a9f656d28f0c?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Baking Powder 200g",
+    "category": "Baking",
+    "categoryId": 6,
+    "price": 30,
+    "image": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Cocoa Powder Premium",
+    "category": "Baking",
+    "categoryId": 6,
+    "price": 65,
+    "image": "https://images.unsplash.com/photo-1610611424854-5e07bc888773?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Brown Sugar 500g",
+    "category": "Baking",
+    "categoryId": 6,
+    "price": 40,
+    "image": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Butter Unsalted 250g",
+    "category": "Baking",
+    "categoryId": 6,
+    "price": 70,
+    "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Chocolate Chips 300g",
+    "category": "Baking",
+    "categoryId": 6,
+    "price": 55,
+    "image": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Yeast Active Dry Pack",
+    "category": "Baking",
+    "categoryId": 6,
+    "price": 20,
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Canned Sweet Corn",
+    "category": "Frozen & Canned",
+    "categoryId": 7,
+    "price": 35,
+    "image": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Frozen Mixed Vegetables",
+    "category": "Frozen & Canned",
+    "categoryId": 7,
+    "price": 55,
+    "image": "https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Canned Tuna in Oil",
+    "category": "Frozen & Canned",
+    "categoryId": 7,
+    "price": 65,
+    "image": "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Frozen French Fries 1kg",
+    "category": "Frozen & Canned",
+    "categoryId": 7,
+    "price": 80,
+    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Canned Chickpeas 400g",
+    "category": "Frozen & Canned",
+    "categoryId": 7,
+    "price": 40,
+    "image": "https://images.unsplash.com/photo-1612257416648-ee7a6c5d49d4?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Frozen Pizza Margherita",
+    "category": "Frozen & Canned",
+    "categoryId": 7,
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Canned Tomato Sauce",
+    "category": "Frozen & Canned",
+    "categoryId": 7,
+    "price": 30,
+    "image": "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=300&h=300&fit=crop&crop=center"
+  },
+  {
+    "name": "Frozen Ice Cream Tub 1L",
+    "category": "Frozen & Canned",
+    "categoryId": 7,
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=300&h=300&fit=crop&crop=center"
   }
 ]

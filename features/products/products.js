@@ -1,8 +1,21 @@
-import { displayCart } from '../../assets/js/cart.js';
+import { displayCart, updateCartBadge } from '../../assets/js/cart.js';
 
 const navbarContainer = document.getElementById('navbar-container');
 const cartSlider = document.getElementById('cart-slider');
 const closeIcon = document.getElementById('close-icon');
+const cartOverlay = document.getElementById('cart-overlay');
+
+function openCart() {
+  cartSlider.classList.add('right-slide');
+  if (cartOverlay) cartOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCartSlider() {
+  cartSlider.classList.remove('right-slide');
+  if (cartOverlay) cartOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
 
 fetch('../../header.html')
   .then((response) => response.text())
@@ -11,12 +24,19 @@ fetch('../../header.html')
     const cartLogo = document.getElementById('cart-logo');
 
     cartLogo.addEventListener('click', function () {
-      cartSlider.classList.toggle('right-slide');
+      if (cartSlider.classList.contains('right-slide')) {
+        closeCartSlider();
+      } else {
+        openCart();
+      }
     });
 
-    closeIcon.addEventListener('click', function () {
-      cartSlider.classList.remove('right-slide');
-    });
+    closeIcon.addEventListener('click', closeCartSlider);
+    if (cartOverlay) {
+      cartOverlay.addEventListener('click', closeCartSlider);
+    }
+
+    updateCartBadge();
   })
   .catch((error) => {
     console.error('Error loading the navigation bar:', error);
@@ -53,7 +73,7 @@ async function displayProducts() {
       categoryTitle.textContent = currentCategory.name;
       categoryDescription.textContent = `Fresh and quality ${currentCategory.name.toLowerCase()} for your daily needs`;
       currentCategoryBreadcrumb.textContent = currentCategory.name;
-      document.title = `${currentCategory.name} - Products`;
+      document.title = `${currentCategory.name} - FreshMart`;
     }
 
     // Filter products by category
@@ -62,7 +82,7 @@ async function displayProducts() {
     );
 
     // Update products count
-    productsCount.textContent = `${filteredProducts.length} Products`;
+    productsCount.innerHTML = `<i class="fas fa-cubes"></i> ${filteredProducts.length} Product${filteredProducts.length !== 1 ? 's' : ''}`;
 
     if (filteredProducts.length === 0) {
       productList.style.display = 'none';
@@ -74,25 +94,32 @@ async function displayProducts() {
     emptyState.classList.add('hidden');
     productList.style.display = 'grid';
 
-    filteredProducts.forEach((product) => {
+    filteredProducts.forEach((product, index) => {
       const productItem = document.createElement('div');
       productItem.classList.add('product-item');
+      productItem.style.animationDelay = `${index * 0.08}s`;
       productItem.innerHTML = `
         <div class="product-image-container">
           <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.src='../../assets/products/placeholder.svg'; this.onerror=null;">
         </div>
-        <h5 class="product__item-name">${product.name}</h5>
-        <div class="product__item-info">
-          <p class="product__item-price">৳${product.price}</p>
-          <div class="quantity-section">
-            <div class="quantity-controls">
-              <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
-              <input type="number" class="quantity-input" value="1" min="1" max="99" aria-label="Quantity">
-              <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
+        <div class="product-card-body">
+          <span class="product__item-category">${product.category}</span>
+          <h5 class="product__item-name">${product.name}</h5>
+          <div class="product__item-info">
+            <div class="product__price-row">
+              <p class="product__item-price">৳${product.price}</p>
+              <span class="product__price-unit">/item</span>
             </div>
-            <button class="add-to-cart" aria-label="Add ${product.name} to cart">
-              <img src="../../assets/cart.png" alt="">Add To Cart
-            </button>
+            <div class="quantity-section">
+              <div class="quantity-controls">
+                <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                <input type="number" class="quantity-input" value="1" min="1" max="99" aria-label="Quantity">
+                <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-to-cart" aria-label="Add ${product.name} to cart">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
           </div>
         </div>
       `;
@@ -140,9 +167,16 @@ async function displayProducts() {
         };
         addToCart(cartItem);
         displayCart();
+        updateCartBadge();
 
         // Reset quantity to 1 after adding to cart
         quantityInput.value = 1;
+
+        // Button feedback animation
+        addToCartButton.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          addToCartButton.style.transform = '';
+        }, 150);
       });
 
       productList.appendChild(productItem);
@@ -156,7 +190,7 @@ async function displayProducts() {
     }, 100);
   } catch (error) {
     console.error('Error fetching data:', error);
-    productsCount.textContent = 'Error loading products';
+    productsCount.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error loading';
     emptyState.classList.remove('hidden');
     productList.style.display = 'none';
   }
@@ -186,7 +220,7 @@ function addToCart(product) {
 
     setTimeout(() => {
       successMessage.classList.add('hidden');
-    }, 2000);
+    }, 2500);
   }
 }
 

@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="productList.css" />
     <link rel="stylesheet" href="../../assets/header.css" />
@@ -15,18 +20,36 @@
   <body>
     <header id="navbar-container"></header>
 
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
     <!-- Cart Slider -->
     <div id="cart-slider" class="slider">
-      <img src="../../assets/close.png" class="close-icon" id="close-icon" />
-      <div class="slider-content" id="cart-list"></div>
-      <footer>
+      <div class="cart-header">
+        <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+        <button class="close-icon" id="close-icon" aria-label="Close cart">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="slider-content" id="cart-list">
+        <div class="cart-empty" id="cart-empty">
+          <i class="fas fa-shopping-bag"></i>
+          <p>Your cart is empty</p>
+          <span>Add some products to get started!</span>
+        </div>
+      </div>
+      <footer class="cart-footer">
         <div class="total" id="total-price"></div>
-        <button class="checkout-button" id="checkout-button">Checkout</button>
+        <button class="checkout-button" id="checkout-button">
+          <i class="fas fa-lock"></i> Secure Checkout
+        </button>
       </footer>
     </div>
 
     <!-- Success Message -->
-    <div id="success-message" class="success__message hidden"></div>
+    <div id="success-message" class="success__message hidden">
+      <span class="success-text"></span>
+    </div>
 
     <!-- Main Content -->
     <main class="products-page">
@@ -35,13 +58,14 @@
         <a href="../../index.html" class="breadcrumb-link">
           <i class="fas fa-home"></i> Home
         </a>
-        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
         <span class="breadcrumb-current" id="current-category">Products</span>
       </nav>
 
       <!-- Page Header -->
       <section class="page-header">
         <div class="header-content">
+          <div class="header-badge"><i class="fas fa-store"></i> Category</div>
           <h1 class="page-title" id="category-title">Our Products</h1>
           <p class="page-subtitle" id="category-description">
             Discover our fresh and quality products
@@ -57,8 +81,10 @@
       <!-- Products Section -->
       <section class="products-section">
         <div class="products-header">
-          <h2 class="section-title">Available Products</h2>
-          <div class="products-count" id="products-count">Loading...</div>
+          <h2 class="section-title"><i class="fas fa-box-open"></i> Available Products</h2>
+          <div class="products-count" id="products-count">
+            <i class="fas fa-spinner fa-spin"></i> Loading...
+          </div>
         </div>
 
         <!-- Product Grid -->
@@ -67,19 +93,28 @@
         <!-- Empty State -->
         <div id="empty-state" class="empty-state hidden">
           <div class="empty-state-content">
-            <i class="fas fa-box-open empty-icon"></i>
+            <div class="empty-icon-wrapper">
+              <i class="fas fa-box-open empty-icon"></i>
+            </div>
             <h3>No Products Found</h3>
             <p>
               Sorry, there are no products available in this category at the
               moment.
             </p>
-            <a href="../../index.html" class="return-home-btn"
-              >Return to Home</a
-            >
+            <a href="../../index.html" class="return-home-btn">
+              <i class="fas fa-home"></i> Return to Home
+            </a>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer products-footer">
+      <div class="footer-bottom">
+        <p>&copy; 2026 FreshMart. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="products.js" type="module"></script>
   </body>

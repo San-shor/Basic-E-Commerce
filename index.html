@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -21,6 +21,9 @@
   <body>
     <header id="navbar-container"></header>
 
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
     <!-- Cart Slider -->
     <div id="cart-slider" class="slider">
       <div class="cart-header">
@@ -30,11 +33,18 @@
         </button>
       </div>
 
-      <div class="slider-content" id="cart-list"></div>
+      <div class="slider-content" id="cart-list">
+        <!-- Empty cart state -->
+        <div class="cart-empty" id="cart-empty">
+          <i class="fas fa-shopping-bag"></i>
+          <p>Your cart is empty</p>
+          <span>Add some products to get started!</span>
+        </div>
+      </div>
       <footer class="cart-footer">
         <div class="total" id="total-price"></div>
         <button class="checkout-button" id="checkout-button">
-          <i class="fas fa-credit-card"></i> Checkout
+          <i class="fas fa-lock"></i> Secure Checkout
         </button>
       </footer>
     </div>
@@ -43,24 +53,45 @@
     <section class="hero-section">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="hero-title">Fresh Groceries Delivered to Your Door</h1>
+          <span class="hero-badge"><i class="fas fa-seedling"></i> 100% Fresh & Organic</span>
+          <h1 class="hero-title">
+            Fresh Groceries<br />
+            <span class="gradient-text">Delivered to Your Door</span>
+          </h1>
           <p class="hero-subtitle">
             Shop from our wide selection of fresh produce, pantry essentials,
             and everyday needs. Fast delivery, great prices, and quality
             guaranteed.
           </p>
+          <div class="hero-cta">
+            <a href="#categories" class="cta-button primary">
+              <i class="fas fa-shopping-basket"></i> Shop Now
+            </a>
+            <a href="#features" class="cta-button secondary">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
           <div class="hero-stats">
             <div class="stat">
-              <i class="fas fa-truck"></i>
-              <span>Free Delivery</span>
+              <div class="stat-icon"><i class="fas fa-truck"></i></div>
+              <div class="stat-text">
+                <strong>Free Delivery</strong>
+                <span>Orders over ৳500</span>
+              </div>
             </div>
             <div class="stat">
-              <i class="fas fa-clock"></i>
-              <span>30min Delivery</span>
+              <div class="stat-icon"><i class="fas fa-clock"></i></div>
+              <div class="stat-text">
+                <strong>30min Delivery</strong>
+                <span>Super fast</span>
+              </div>
             </div>
             <div class="stat">
-              <i class="fas fa-leaf"></i>
-              <span>Fresh Products</span>
+              <div class="stat-icon"><i class="fas fa-leaf"></i></div>
+              <div class="stat-text">
+                <strong>Fresh Products</strong>
+                <span>Quality guaranteed</span>
+              </div>
             </div>
           </div>
         </div>
@@ -68,13 +99,26 @@
           <div class="hero-image-container">
             <i class="fas fa-shopping-basket hero-icon"></i>
           </div>
+          <div class="hero-floating-card card-1">
+            <i class="fas fa-apple-alt"></i>
+            <span>Fresh Fruits</span>
+          </div>
+          <div class="hero-floating-card card-2">
+            <i class="fas fa-carrot"></i>
+            <span>Vegetables</span>
+          </div>
+          <div class="hero-floating-card card-3">
+            <i class="fas fa-fish"></i>
+            <span>Seafood</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Categories Section -->
-    <main class="categories-section">
+    <main class="categories-section" id="categories">
       <div class="section-header">
+        <span class="section-badge"><i class="fas fa-th-large"></i> Categories</span>
         <h2 class="section-title">Shop by Category</h2>
         <p class="section-subtitle">
           Browse our carefully curated categories to find exactly what you need
@@ -86,31 +130,95 @@
     </main>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <span class="section-badge light"><i class="fas fa-star"></i> Why Choose Us</span>
+        <h2 class="section-title">Why Shop with FreshMart?</h2>
+        <p class="section-subtitle">We're committed to providing you with the best shopping experience</p>
+      </div>
       <div class="features-container">
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-shipping-fast"></i>
           </div>
-          <h3>Fast Delivery</h3>
-          <p>Get your groceries delivered in 30 minutes or less</p>
+          <h3>Lightning Fast Delivery</h3>
+          <p>Get your groceries delivered in 30 minutes or less, right to your doorstep</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-shield-alt"></i>
           </div>
           <h3>Quality Guarantee</h3>
-          <p>100% fresh products or your money back</p>
+          <p>100% fresh products or your money back — we stand behind every item</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-headset"></i>
           </div>
           <h3>24/7 Support</h3>
-          <p>Customer support available around the clock</p>
+          <p>Our friendly customer support team is available around the clock for you</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3>Best Prices</h3>
+          <p>Competitive prices with regular deals and discounts on your favorites</p>
         </div>
       </div>
     </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2><i class="fas fa-envelope-open-text"></i> Stay Updated</h2>
+          <p>Get the latest deals and fresh arrivals delivered to your inbox</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" class="newsletter-input" />
+          <button class="newsletter-btn">
+            Subscribe <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>Fresh<span>Mart</span></h3>
+          <p>Your trusted online grocery store. Fresh products, fast delivery, and great prices every day.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="/">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#features">About Us</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Returns</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="#"><i class="fas fa-phone"></i> +880 1234-567890</a>
+          <a href="#"><i class="fas fa-envelope"></i> hello@freshmart.com</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FreshMart. All rights reserved. Made with <i class="fas fa-heart"></i> for fresh food lovers.</p>
+      </div>
+    </footer>
 
     <script src="script.js" type="module"></script>
   </body>
