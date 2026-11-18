@@ -103,23 +103,22 @@ async function displayProducts() {
           <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.src='../../assets/products/placeholder.svg'; this.onerror=null;">
         </div>
         <div class="product-card-body">
-          <span class="product__item-category">${product.category}</span>
-          <h5 class="product__item-name">${product.name}</h5>
+          <h5 class="product__item-name" title="${product.name}">${product.name}</h5>
           <div class="product__item-info">
-            <div class="product__price-row">
-              <p class="product__item-price">৳${product.price}</p>
-              <span class="product__price-unit">/item</span>
-            </div>
-            <div class="quantity-section">
+            <div class="product__buy-row">
+              <div class="product__price-row">
+                <p class="product__item-price">৳${product.price}</p>
+                <span class="product__price-unit">/item</span>
+              </div>
               <div class="quantity-controls">
-                <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                <button class="quantity-btn minus" aria-label="Decrease quantity">&minus;</button>
                 <input type="number" class="quantity-input" value="1" min="1" max="99" aria-label="Quantity">
                 <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
               </div>
-              <button class="add-to-cart" aria-label="Add ${product.name} to cart">
-                <i class="fas fa-cart-plus"></i> Add
-              </button>
             </div>
+            <button class="add-to-cart" aria-label="Add ${product.name} to cart">
+              <i class="fas fa-cart-plus"></i> <span>Add to cart</span>
+            </button>
           </div>
         </div>
       `;
@@ -172,11 +171,14 @@ async function displayProducts() {
         // Reset quantity to 1 after adding to cart
         quantityInput.value = 1;
 
-        // Button feedback animation
-        addToCartButton.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-          addToCartButton.style.transform = '';
-        }, 150);
+        // Button feedback: show "Added" for a moment
+        clearTimeout(addToCartButton._resetTimer);
+        addToCartButton.classList.add('added');
+        addToCartButton.innerHTML = '<i class="fas fa-check"></i> <span>Added</span>';
+        addToCartButton._resetTimer = setTimeout(() => {
+          addToCartButton.classList.remove('added');
+          addToCartButton.innerHTML = '<i class="fas fa-cart-plus"></i> <span>Add to cart</span>';
+        }, 1200);
       });
 
       productList.appendChild(productItem);

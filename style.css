@@ -257,6 +257,26 @@ img {
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* Real product photos in the hero (2 x 2) */
+.hero-image-container.hero-photos {
+  width: 340px;
+  height: 340px;
+  border-radius: 36px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hero-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  background: #e0f5d0;
+  box-shadow: 0 6px 14px rgba(45, 80, 22, 0.25);
+}
+
 /* Floating Cards */
 .hero-floating-card {
   position: absolute;
@@ -404,12 +424,12 @@ img {
   margin: 0 auto 1.5rem auto;
   border-radius: 50%;
   overflow: hidden;
-  background: linear-gradient(135deg, #f0fbe0, #e0f5d0);
+  background: #fff; /* the category pictures have a white background */
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.35s ease;
-  border: 2px solid rgba(137, 199, 74, 0.15);
+  border: 3px solid #e0f5d0;
 }
 
 .category-item:hover .category-image {
@@ -732,6 +752,28 @@ img {
 
 .footer-bottom i.fa-heart {
   color: #e74c3c;
+}
+
+.footer-bottom a {
+  color: #89c74a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+}
+
+.newsletter-done {
+  font-weight: 600;
+  color: #2d5016;
+  background: #fff;
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
 }
 
 /* ========================

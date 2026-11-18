@@ -17,6 +17,17 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./assets/header.css" />
     <title>FreshMart - Online Grocery Store</title>
+    <meta name="description" content="FreshMart: a sample online grocery shop with categories, cart and checkout. A live demo built by WebNest Studio." />
+    <meta name="theme-color" content="#6ba033" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://e-commerce-supermarket.netlify.app/" />
+    <meta property="og:title" content="FreshMart - Online Grocery Store (live demo)" />
+    <meta property="og:description" content="Browse categories, add to cart and check out. A sample shop website built by WebNest Studio." />
+    <meta property="og:image" content="https://e-commerce-supermarket.netlify.app/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
   </head>
   <body>
     <header id="navbar-container"></header>
@@ -96,8 +107,11 @@
           </div>
         </div>
         <div class="hero-image">
-          <div class="hero-image-container">
-            <i class="fas fa-shopping-basket hero-icon"></i>
+          <div class="hero-image-container hero-photos">
+            <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=300&h=300&fit=crop&crop=center" alt="Fresh tomatoes" width="150" height="150" />
+            <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300&h=300&fit=crop&crop=center" alt="Fresh bananas" width="150" height="150" />
+            <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=300&h=300&fit=crop&crop=center" alt="Orange juice" width="150" height="150" />
+            <img src="https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=300&h=300&fit=crop&crop=center" alt="Salmon fillet" width="150" height="150" />
           </div>
           <div class="hero-floating-card card-1">
             <i class="fas fa-apple-alt"></i>
@@ -175,12 +189,12 @@
           <h2><i class="fas fa-envelope-open-text"></i> Stay Updated</h2>
           <p>Get the latest deals and fresh arrivals delivered to your inbox</p>
         </div>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Enter your email address" class="newsletter-input" />
-          <button class="newsletter-btn">
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" required placeholder="Enter your email address" class="newsletter-input" aria-label="Email address" />
+          <button class="newsletter-btn" type="submit">
             Subscribe <i class="fas fa-paper-plane"></i>
           </button>
-        </div>
+        </form>
       </div>
     </section>
 
@@ -191,9 +205,8 @@
           <h3>Fresh<span>Mart</span></h3>
           <p>Your trusted online grocery store. Fresh products, fast delivery, and great prices every day.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61594388112794" target="_blank" rel="noopener" aria-label="WebNest Studio on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://m.me/61594388112794" target="_blank" rel="noopener" aria-label="Message WebNest Studio"><i class="fab fa-facebook-messenger"></i></a>
           </div>
         </div>
         <div class="footer-links">
@@ -203,20 +216,20 @@
           <a href="#features">About Us</a>
         </div>
         <div class="footer-links">
-          <h4>Support</h4>
-          <a href="#">Help Center</a>
-          <a href="#">Shipping Info</a>
-          <a href="#">Returns</a>
+          <h4>Shop</h4>
+          <a href="./features/products/productsList.html?categoryId=1">Fruits &amp; Vegetables</a>
+          <a href="./features/products/productsList.html?categoryId=5">Meat &amp; Fish</a>
+          <a href="./features/products/productsList.html?categoryId=3">Beverages</a>
         </div>
         <div class="footer-links">
-          <h4>Contact</h4>
-          <a href="#"><i class="fas fa-phone"></i> +880 1234-567890</a>
-          <a href="#"><i class="fas fa-envelope"></i> hello@freshmart.com</a>
-          <a href="#"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</a>
+          <h4>Want a shop like this?</h4>
+          <a href="https://m.me/61594388112794?text=Hi%2C%20I%20saw%20the%20FreshMart%20demo.%20I%20want%20a%20shop%20website%20like%20this." target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> Message WebNest Studio</a>
+          <a href="https://www.facebook.com/profile.php?id=61594388112794" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> WebNest Studio page</a>
+          <span class="footer-note"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 FreshMart. All rights reserved. Made with <i class="fas fa-heart"></i> for fresh food lovers.</p>
+        <p>FreshMart is a demo shop. Products and prices are samples. Designed and built by <a href="https://www.facebook.com/profile.php?id=61594388112794" target="_blank" rel="noopener">WebNest Studio</a>.</p>
       </div>
     </footer>
 

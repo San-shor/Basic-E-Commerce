@@ -97,3 +97,13 @@ window.updateCartBadge = updateCartBadge;
 
 // Listen for storage changes (in case cart is modified from another tab)
 window.addEventListener('storage', updateCartBadge);
+
+// Newsletter: demo only, nothing is sent anywhere
+const newsletterForm = document.getElementById('newsletter-form');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    newsletterForm.innerHTML =
+      '<p class="newsletter-done"><i class="fas fa-check-circle"></i> Thanks for subscribing! (This is a demo, no email is sent.)</p>';
+  });
+}

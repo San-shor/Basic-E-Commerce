@@ -1,5 +1,49 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
 
+/* The whole header sticks to the top (the inner bar alone can't, its parent is only as tall as itself) */
+#navbar-container {
+  position: sticky;
+  top: -36px; /* the demo bar (36px) scrolls away, the white bar stays */
+  z-index: 100;
+}
+
+/* reserve space while header.html is still loading, so the page does not jump */
+#navbar-container:empty {
+  min-height: 103px;
+}
+
+/* Demo banner: tells visitors this is a WebNest Studio sample */
+.demo-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 36px;
+  padding: 0 1rem;
+  background: #1f3a12;
+  color: #e8f5d8;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.demo-pill {
+  background: #f2c14e;
+  color: #3b2a06;
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+.demo-text b { color: #fff; }
+.demo-link {
+  color: #b9e986;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.demo-link:hover { text-decoration: underline; }
+
 /* Header Container */
 .container {
   display: flex;
@@ -10,9 +54,6 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: #89c74a;
-  position: sticky;
-  top: 0;
-  z-index: 100;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(137, 199, 74, 0.15);
   transition: all 0.3s ease;
@@ -27,13 +68,15 @@
   color: #fff;
 }
 
-.logo img {
+.logo img,
+.logo svg {
   height: 42px;
   width: auto;
   transition: transform 0.3s ease;
 }
 
-.logo-icon-link:hover .logo img {
+.logo-icon-link:hover .logo img,
+.logo-icon-link:hover .logo svg {
   transform: scale(1.05);
 }
 
@@ -87,6 +130,9 @@
 .cart {
   position: relative;
   cursor: pointer;
+  border: 0;
+  background: none;
+  font: inherit;
   padding: 0.6rem;
   border-radius: 50%;
   transition: all 0.25s ease;
@@ -149,7 +195,8 @@
     display: none;
   }
 
-  .logo img {
+  .logo img,
+  .logo svg {
     height: 34px;
   }
 
@@ -161,6 +208,20 @@
 @media (max-width: 480px) {
   .container {
     padding: 0.5rem 1rem;
+  }
+
+  .demo-bar {
+    font-size: 0.78rem;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .demo-long {
+    display: none;
+  }
+
+  #navbar-container:empty {
+    min-height: 92px;
   }
 
   .brand-name {
