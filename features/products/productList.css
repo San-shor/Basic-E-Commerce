@@ -505,8 +505,9 @@
 }
 
 @media (max-width: 768px) {
+  /* tablets: 3 cards per row (phones get 2, see below) */
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
   }
   .products-page {
@@ -547,14 +548,6 @@
     font-size: 1.15rem;
   }
 
-
-
-
-
-
-
-
-
   .success__message {
     left: 1rem;
     right: 1rem;
@@ -568,6 +561,13 @@
   .hidden {
     top: -100px !important;
     left: 1rem;
+  }
+}
+
+/* phones: 2 cards per row */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -593,16 +593,17 @@
     display: none;
   }
 
+  /* bigger - / + buttons, easier for thumbs */
   .quantity-btn {
-    width: 26px;
-    height: 26px;
-    font-size: 0.9rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.05rem;
   }
 
   .quantity-controls .quantity-input {
     width: 24px;
-    height: 26px;
-    font-size: 0.85rem;
+    height: 32px;
+    font-size: 0.9rem;
   }
 
   .add-to-cart {
